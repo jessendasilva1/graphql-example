@@ -1,3 +1,4 @@
+/*
 const { ApolloServer, gql } = require('apollo-server');
 
 // This is a (sample) collection of books we'll be able to query
@@ -50,3 +51,14 @@ const server = new ApolloServer({ typeDefs, resolvers });
 server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
     console.log(`🚀 Server ready at ${url}`);
   });
+  */
+
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) =>{
+    res.send({'hi': 'there'});
+})
+
+const PORT = process.env.PORT || 5000;
+app.listen(5000);
